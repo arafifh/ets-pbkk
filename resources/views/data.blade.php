@@ -33,11 +33,41 @@
             background-color: #f2f2f2;
             text-align: center;
         }
+
+        .input-group-append input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .input-group-append input[type="submit"]:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <div class="data-table">
         <h2>Data</h2>
+        <form method="get" action="{{ route('search-pasien') }}">
+            <div class="input-group">
+                <input type="text" name="search" class="form-control" placeholder="Cari Pasien">
+                <div class="input-group-append">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+        <form method="get" action="{{ route('search-dokter') }}">
+            <div class="input-group">
+                <input type="text" name="search" class="form-control" placeholder="Cari Dokter">
+                <div class="input-group-append">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
         <table>
             <thead>
                 <tr>
